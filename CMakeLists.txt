@@ -67,14 +67,14 @@ else()
 endif()
 
 set(BASISU_SRC_LIST ${COMMON_SRC_LIST} 
-    rdopng.cpp
-    encoder/basisu_enc.cpp
-    encoder/basisu_resampler.cpp
-    encoder/basisu_resample_filters.cpp
-    encoder/lodepng.cpp
-    encoder/apg_bmp.c
-    encoder/jpgd.cpp
-	encoder/packagemerge.c
+    src/rdopng.cpp
+    src/encoder/basisu_enc.cpp
+    src/encoder/basisu_resampler.cpp
+    src/encoder/basisu_resample_filters.cpp
+    src/encoder/lodepng.cpp
+    src/encoder/apg_bmp.c
+    src/encoder/jpgd.cpp
+    src/encoder/packagemerge.c
     )
 
 if (APPLE)

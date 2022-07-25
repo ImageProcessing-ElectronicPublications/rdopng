@@ -1,11 +1,25 @@
+`Origin__:`
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/richgel999/rdopng)
+![GitHub Release Date](https://img.shields.io/github/release-date/richgel999/rdopng)
+![GitHub repo size](https://img.shields.io/github/repo-size/richgel999/rdopng)
+![GitHub all releases](https://img.shields.io/github/downloads/richgel999/rdopng/total)
+![GitHub](https://img.shields.io/github/license/richgel999/rdopng)  
+`ORG.IPEP:`
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/ImageProcessing-ElectronicPublications/rdopng)
+![GitHub Release Date](https://img.shields.io/github/release-date/ImageProcessing-ElectronicPublications/rdopng)
+![GitHub repo size](https://img.shields.io/github/repo-size/ImageProcessing-ElectronicPublications/rdopng)
+![GitHub all releases](https://img.shields.io/github/downloads/ImageProcessing-ElectronicPublications/rdopng/total)
+![GitHub](https://img.shields.io/github/license/ImageProcessing-ElectronicPublications/rdopng)  
+
 # rdopng
+
 Rate-Distortion Optimized Lossy PNG and QOI Encoding Tool
 
 rdopng is a command line tool which uses LZ match optimization, Lagrangian multiplier [rate distortion optimization (RDO)](https://en.wikipedia.org/wiki/Rate%E2%80%93distortion_optimization), a simple perceptual error tolerance model, and [Oklab](https://bottosson.github.io/posts/oklab/)-based colorspace error metrics to encode 24/32bpp PNG files which are 30-80% smaller relative to lodepng/libpng. The tool defaults to reasonably fast near-lossless settings which writes PNG's around 30-40% smaller than lossless PNG encoders.
 
 Unlike [pngquant](https://pngquant.org/), rdopng does not use 256-color palettes or dithering. PNG files encoded by rdopng typically range between roughly 2.5-7bpp, depending on the options used (and how much time and patience you have).
 
-Some example encodes and command lines are [here](https://github.com/richgel999/rdopng/wiki/Examples).
+Encoding examples [here](https://github.com/ImageProcessing-ElectronicPublications/rdopng-examples). Some example encodes and command lines are [here](https://github.com/richgel999/rdopng/wiki/Examples).
 
 You can download a pre-built Windows binary [here](https://github.com/richgel999/rdopng/releases). You may need to install the [VS 2022 runtime redistributable from Microsoft](https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170).
 
@@ -86,8 +100,10 @@ The higher the level within a match length category, the slower the encoder. Hig
 Most options work with both QOI and PNG. The -level option is only for PNG, and the -uber/-better options are only for QOI.
 
 ### Known Problems
+
 rdopng has only been tested on little endian platforms, under Windows using MSVC and Ubuntu Linux using clang/gcc. There are a few known endian issues in there, which I'll eventually fix. It has not been compiled or tested on OSX.
 
 ### Special Thanks
+
 Thanks to [Paul Hughes](https://twitter.com/PaulieHughes) for encouraging me to continue working on this on Twitter. Also, thanks to [Jyrki Alakuijala](https://twitter.com/jyzg) for suggesting to drop YCbCr for an alternative such as Oklab.
 
